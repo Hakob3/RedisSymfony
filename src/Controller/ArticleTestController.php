@@ -24,7 +24,7 @@ class ArticleTestController extends AbstractController
         RedisCacheService $redisCacheService
     ): Response
     {
-        $id = 1;
+        $id = random_int(1, 12);
         $article = $redisCacheService->getCachedResults($id, Article::class);
 
         return new JsonResponse(json_decode($article, true) ?? []);
