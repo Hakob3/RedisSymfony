@@ -1,0 +1,3 @@
+conf/mysql/db-data/
+conf/redis/data/
+log/
